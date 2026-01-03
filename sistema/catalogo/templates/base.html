@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Importadora Tushar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #0b2d5c;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-link {
+            color: #dce6f5 !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        .content-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            height: 180px;
+            object-fit: contain;
+        }
+        
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="https://media.discordapp.net/attachments/443725780191543307/1456773163458498631/unnamed_2.png?ex=6959953b&is=695843bb&hm=276479089029ca3eaf08433317f047e6faaa36496ec0cffdf985a5dbf5424677&=&format=webp&quality=lossless">
+            Importadora Tushar
+        </a>
+
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/crear/">Crear producto</a>
+            <a class="nav-link" href="/categorias/">Categorías</a>
+            <a class="nav-link" href="/catalogo/">Catálogo</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="content-box">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+</body>
+</html>
+

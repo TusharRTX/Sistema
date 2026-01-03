@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="text-center mb-5">
+    <h1 class="fw-bold text-primary">
+        Bienvenido al Sistema de Catálogo PDF
+    </h1>
+    <p class="fs-5 mt-3">
+        Importadora <strong>Tushar</strong><br>
+        Selecciona una opción para comenzar
+    </p>
+</div>
+
+<div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+                <h3>➕</h3>
+                <h5 class="card-title mt-2">Crear Producto</h5>
+                <p class="card-text">
+                    Agrega nuevos productos al sistema con imagen, código y tamaño.
+                </p>
+                <a href="/crear/" class="btn btn-primary btn-lg w-100">
+                    Crear
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+                <h3>📂</h3>
+                <h5 class="card-title mt-2">Categorías</h5>
+                <p class="card-text">
+                    Revisa y administra los productos organizados por categoría.
+                </p>
+                <a href="/categorias/" class="btn btn-secondary btn-lg w-100">
+                    Ver categorías
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+                <h3>🛍️</h3>
+                <h5 class="card-title mt-2">Catálogo PDF</h5>
+                <p class="card-text">
+                    Genera y descarga el catálogo en formato PDF profesional.
+                </p>
+                <a href="/catalogo/" class="btn btn-success btn-lg w-100">
+                    Ir al catálogo
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

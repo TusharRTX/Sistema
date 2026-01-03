@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class="text-primary mb-4">Catálogo de Productos</h2>
+<p class="text-muted">
+    Seleccione las categorías que desea incluir en el PDF
+</p>
+
+
+<form method="get" action="/catalogo/pdf/" target="_blank">
+
+{% for c in categorias %}
+<div class="mt-4">
+
+    <h3>
+        <input type="checkbox" name="categorias" value="{{ c.id }}">
+        {{ c.nombre }}
+    </h3>
+
+    <!-- <div class="row">
+    {% for p in c.producto_set.all %}
+        {% if p.activo %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center">
+                <img src="{{ p.imagen.url }}" class="card-img-top">
+                <div class="card-body">
+                    <strong>{{ p.nombre }}</strong><br>
+                    Código: {{ p.codigo }}<br>
+                    Tamaño: {{ p.tamaño }}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div> -->
+
+</div>
+{% endfor %}
+
+<button class="btn btn-success btn-lg mt-4">
+    📄 Ver / Descargar PDF
+</button>
+
+</form>
+
+{% endblock %}

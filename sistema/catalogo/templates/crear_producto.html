@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 class="text-primary mb-4">Crear / Editar Producto</h2>
+
+<form method="post" enctype="multipart/form-data" class="mt-4">
+    {% csrf_token %}
+    
+    <div class="mb-3">
+        {{ form.categoria.label_tag }}
+        {{ form.categoria }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.nombre.label_tag }}
+        {{ form.nombre }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.codigo.label_tag }}
+        {{ form.codigo }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.tamaño.label_tag }}
+        {{ form.tamaño }}
+    </div>
+
+    <div class="mb-3">
+        {{ form.imagen.label_tag }}
+        {{ form.imagen }}
+    </div>
+
+    <div class="form-check mb-3">
+        {{ form.activo }} {{ form.activo.label_tag }}
+    </div>
+
+    <button class="btn btn-success btn-lg">💾 Guardar</button>
+</form>
+
+{% endblock %}
